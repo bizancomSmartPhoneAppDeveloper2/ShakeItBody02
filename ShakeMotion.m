@@ -9,5 +9,5 @@
 #import "ShakeMotion.h"
 
 @implementation ShakeMotion
-////////////////////
+
 @end
