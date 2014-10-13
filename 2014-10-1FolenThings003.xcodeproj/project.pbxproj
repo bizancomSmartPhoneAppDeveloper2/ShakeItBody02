@@ -16,6 +16,8 @@
 		7D1158FA19EB62F20043217C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D1158F919EB62F20043217C /* Images.xcassets */; };
 		7D1158FD19EB62F20043217C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D1158FB19EB62F20043217C /* LaunchScreen.xib */; };
 		7D11590919EB62F30043217C /* _014_10_1FolenThings003Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D11590819EB62F30043217C /* _014_10_1FolenThings003Tests.m */; };
+		7D11598119EB937D0043217C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D11598019EB937C0043217C /* Default-568h@2x.png */; };
+		7DCBA6FA19EBAD8A00861C54 /* ShakeMotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DCBA6F919EBAD8900861C54 /* ShakeMotion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,9 @@
 		7D11590219EB62F30043217C /* 2014-10-1FolenThings003Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "2014-10-1FolenThings003Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D11590719EB62F30043217C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D11590819EB62F30043217C /* _014_10_1FolenThings003Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _014_10_1FolenThings003Tests.m; sourceTree = "<group>"; };
+		7D11598019EB937C0043217C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		7DCBA6F819EBAD8900861C54 /* ShakeMotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShakeMotion.h; path = ../ShakeMotion.h; sourceTree = "<group>"; };
+		7DCBA6F919EBAD8900861C54 /* ShakeMotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShakeMotion.m; path = ../ShakeMotion.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +99,11 @@
 				7D1158F319EB62F20043217C /* GameViewController.h */,
 				7D1158F419EB62F20043217C /* GameViewController.m */,
 				7D1158F619EB62F20043217C /* Main.storyboard */,
+				7DCBA6F819EBAD8900861C54 /* ShakeMotion.h */,
+				7DCBA6F919EBAD8900861C54 /* ShakeMotion.m */,
 				7D1158F919EB62F20043217C /* Images.xcassets */,
 				7D1158FB19EB62F20043217C /* LaunchScreen.xib */,
+				7D11598019EB937C0043217C /* Default-568h@2x.png */,
 				7D1158E719EB62F20043217C /* Supporting Files */,
 			);
 			path = "2014-10-1FolenThings003";
@@ -176,6 +184,7 @@
 				TargetAttributes = {
 					7D1158E319EB62F20043217C = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = ALGGF43MAA;
 					};
 					7D11590119EB62F30043217C = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -210,6 +219,7 @@
 				7D1158FD19EB62F20043217C /* LaunchScreen.xib in Resources */,
 				7D1158FA19EB62F20043217C /* Images.xcassets in Resources */,
 				7D1158F219EB62F20043217C /* GameScene.sks in Resources */,
+				7D11598119EB937D0043217C /* Default-568h@2x.png in Resources */,
 				7D1158F819EB62F20043217C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DCBA6FA19EBAD8A00861C54 /* ShakeMotion.m in Sources */,
 				7D1158F519EB62F20043217C /* GameViewController.m in Sources */,
 				7D1158ED19EB62F20043217C /* AppDelegate.m in Sources */,
 				7D1158F019EB62F20043217C /* GameScene.m in Sources */,
@@ -353,7 +364,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "2014-10-1FolenThings003/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -363,7 +376,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "2014-10-1FolenThings003/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -422,6 +437,7 @@
 				7D11590E19EB62F30043217C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7D11590F19EB62F30043217C /* Build configuration list for PBXNativeTarget "2014-10-1FolenThings003Tests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +446,7 @@
 				7D11591119EB62F30043217C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
