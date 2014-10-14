@@ -10,4 +10,7 @@
 
 @interface GameScene : SKScene
 
+
+-(void)callingSake;
+
 @end

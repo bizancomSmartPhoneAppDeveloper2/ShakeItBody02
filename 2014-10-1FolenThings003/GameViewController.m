@@ -30,6 +30,15 @@
 
 
 @implementation GameViewController
+{
+    
+    GameScene *scene;
+    
+    
+}
+
+
+
 
 -(void)viewWillLayoutSubviews
 {
@@ -42,39 +51,68 @@
         skView.showsFPS = YES;
         skView.showsNodeCount = YES;
         
-        SKScene * scene = [GameScene sceneWithSize:skView.bounds.size];
+        scene = [GameScene sceneWithSize:skView.bounds.size];
         scene.scaleMode = SKSceneScaleModeAspectFill;
         
         [skView presentScene:scene];
     }
 }
 
+
+
+
+-(void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
     
-    - (BOOL)shouldAutorotate
+    if ( event.subtype == UIEventSubtypeMotionShake )
     {
-        return YES;
+        NSLog(@"you find me");//コードが通っているかのチェック用
+        
+        //callingSakeのメソッド呼び込んでいる
+        [scene callingSake];
+        
     }
-    
-    - (NSUInteger)supportedInterfaceOrientations
+}
+
+
+
+
+
+- (BOOL)shouldAutorotate
+{
+    return YES;
+}
+
+
+
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
     {
-        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
-        {
-            return UIInterfaceOrientationMaskAllButUpsideDown;
-        }
-        else
-        {
-            return UIInterfaceOrientationMaskAll;
-        }
+        return UIInterfaceOrientationMaskAllButUpsideDown;
     }
-    
-    - (void)didReceiveMemoryWarning
+    else
     {
-        [super didReceiveMemoryWarning];
-        // Release any cached data, images, etc that aren't in use.
+        return UIInterfaceOrientationMaskAll;
     }
-    
-    - (BOOL)prefersStatusBarHidden {
-        return YES;
-    }
-    
-    @end
+}
+
+
+
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Release any cached data, images, etc that aren't in use.
+}
+
+
+
+
+//iPhoneの画面上の上部の情報を消すかどうか？
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
+@end

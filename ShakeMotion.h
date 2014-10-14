@@ -6,8 +6,12 @@
 //  Copyright (c) 平成26年 sectionK. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+#import <SpriteKit/SpriteKit.h>
 
-@interface ShakeMotion : NSObject
+
+
+@interface ShakeMotion : SKScene
 
 @end

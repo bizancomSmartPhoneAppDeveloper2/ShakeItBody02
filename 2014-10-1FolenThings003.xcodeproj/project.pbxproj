@@ -17,6 +17,7 @@
 		7D1158FD19EB62F20043217C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D1158FB19EB62F20043217C /* LaunchScreen.xib */; };
 		7D11590919EB62F30043217C /* _014_10_1FolenThings003Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D11590819EB62F30043217C /* _014_10_1FolenThings003Tests.m */; };
 		7D11598119EB937D0043217C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D11598019EB937C0043217C /* Default-568h@2x.png */; };
+		7D832A8F19EC05DE0038B6E9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D832A8E19EC05DE0038B6E9 /* UIKit.framework */; };
 		7DCBA6FA19EBAD8A00861C54 /* ShakeMotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DCBA6F919EBAD8900861C54 /* ShakeMotion.m */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		7D11590719EB62F30043217C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D11590819EB62F30043217C /* _014_10_1FolenThings003Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _014_10_1FolenThings003Tests.m; sourceTree = "<group>"; };
 		7D11598019EB937C0043217C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		7D832A8E19EC05DE0038B6E9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7DCBA6F819EBAD8900861C54 /* ShakeMotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShakeMotion.h; path = ../ShakeMotion.h; sourceTree = "<group>"; };
 		7DCBA6F919EBAD8900861C54 /* ShakeMotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShakeMotion.m; path = ../ShakeMotion.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D832A8F19EC05DE0038B6E9 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +76,7 @@
 		7D1158DB19EB62F20043217C = {
 			isa = PBXGroup;
 			children = (
+				7D832A8E19EC05DE0038B6E9 /* UIKit.framework */,
 				7D1158E619EB62F20043217C /* 2014-10-1FolenThings003 */,
 				7D11590519EB62F30043217C /* 2014-10-1FolenThings003Tests */,
 				7D1158E519EB62F20043217C /* Products */,
