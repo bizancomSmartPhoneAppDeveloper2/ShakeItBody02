@@ -150,18 +150,18 @@ static inline CGFloat skRand(CGFloat low, CGFloat high) {
 {
     
     //if (self = [super initWithSize:size])////ここのメソッドにはこれはいらない。
-    
+    {
     SKLabelNode *aWard = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
     aWard.text = @"fouk YOU";
     aWard.fontSize = 40;
     aWard.position = CGPointMake(CGRectGetMidX(self.frame), 500);
     [self addChild:aWard];
-    
+    }
     
     // if ( event.subtype == UIEventSubtypeMotionShake )
     {
         
-        CGPoint position = CGPointMake(CGRectGetMidX(self.frame), 500);
+        CGPoint position = CGPointMake(skRand(40, 240),self.size.height);
         
         SKNode *ball = [self newBall];
         ball.position = position;
