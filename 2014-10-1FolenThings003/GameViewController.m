@@ -9,6 +9,14 @@
 #import "GameViewController.h"
 #import "GameScene.h"
 
+@interface GameViewController ()
+
+@property AVAudioPlayer *appleFall;
+
+@end
+
+
+
 @implementation SKScene (Unarchive)
 
 + (instancetype)unarchiveFromFile:(NSString *)file {
@@ -63,14 +71,14 @@
 
 -(void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
-    
-    if ( event.subtype == UIEventSubtypeMotionShake )
+    if (event.type == UIEventTypeMotion && event.subtype == UIEventSubtypeMotionShake)
+    //if ( event.subtype == UIEventSubtypeMotionShake )
     {
         NSLog(@"you find me");//コードが通っているかのチェック用
         
         //callingSakeのメソッド呼び込んでいる
         [scene callingSake];
-        
+        [self appleFallSound];
     }
 }
 
@@ -114,5 +122,29 @@
 - (BOOL)prefersStatusBarHidden {
     return YES;
 }
+
+
+-(void)appleFallSound
+{
+    NSString *soundPath = [[NSBundle mainBundle] pathForResource:@"foleDown" ofType:@"mp3"];
+    NSURL *appleSoundurl = [NSURL fileURLWithPath:soundPath];
+    self.appleFall = [[AVAudioPlayer alloc]initWithContentsOfURL:appleSoundurl error:NULL];
+    
+
+    {
+        if (self.appleFall.playing)
+        {
+            self.appleFall.currentTime = 0.0;
+        }
+        else
+        {
+            [self.appleFall play];
+        }
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+    }
+}
+
+
+
 
 @end
